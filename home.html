@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>online courses</title>
+		<link rel="stylesheet" type="text/css" href="home.css">
+	</head>
+	<body>
+		<ul>
+			<li><a href="home.html"><img src="logo.jpg" alt="logo" width="65" height="65"></a></li>
+			<li><a href="home.html"><h2>Home</h2></a></li>
+			<li><a href="My_Account.html"><h2>My Account</h2></a></li>
+			<li><a href="Registration.html"><h2>Registration</h2></a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn"><h2>Dropdown</h2></a>
+				<div class="dropdown-content">
+					<a href="wuzrastni_kozi.html"><h2>Mladi Kozi</h2></a>
+					
+					<a href="Semejni_Kzozi.htlm"><h2>Semejni Kozi</h2></a>
+				</div>
+			</li>
+		</ul>
+		
+	</body>
+	<div class="container_1">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="12.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="13.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="14.jpg" style="width:100%">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="12.jpg" style="width:100%" onclick="currentSlide(1)" alt="koza">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="13.jpg" style="width:100%" onclick="currentSlide(2)" alt="koza">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="14.jpg" style="width:100%" onclick="currentSlide(3)" alt="koza">
+    </div>
+    
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<div class="container_1">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="k_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="k_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="koza_bashta.jpg" style="width:100%">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="k_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="koza otzad">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="k_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="koza otpred">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="koza_bashta	.jpg" style="width:100%" onclick="currentSlide(3)" alt="koza bashta">
+    </div>
+    
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</html>
